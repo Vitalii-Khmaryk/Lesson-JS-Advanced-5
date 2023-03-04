@@ -1,0 +1,139 @@
+.menu{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    &-box{
+        display: flex;
+    }
+    p{
+        margin-left: 20px;
+    }
+}
+.menu-btn{
+    font-weight: bold;
+    color: blue;
+    width: 80px;
+    background-color: white;
+   border: none;
+   border-bottom: 1px solid gray;
+    margin-left: 10px;
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+}
+.menu-btn:hover{
+    border: 1px solid gray;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    color: rgb(255, 242, 0);
+    border-bottom: 1px solid white;
+}
+.active{
+    border: 2px solid gray;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    color: green;
+    border-bottom: 1px solid white;
+}
+.back{
+    cursor: pointer;
+    margin-right: 20px;
+    color: red;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box{
+    background-color: whitesmoke;
+    border-radius: 4px;
+    width: 700px;
+    height: 280px;
+}
+.badwords{
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.inpBox{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.text{
+    width: 66%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 1px solid white;
+}
+.text:focus{
+    box-shadow: 0 0 5px 5px rgb(116, 116, 210);
+}
+.add{
+    background-color: yellow;
+    border: 1px solid yellow;
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    color: black;
+    cursor: pointer;
+}
+.add:hover{
+    box-shadow: 0 0 5px 1px black;
+    font-weight: bold;
+}
+.reset{
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    cursor: pointer;
+}
+.reset:hover{
+    box-shadow: 0 0 5px 1px black;
+    font-weight: bold;
+}
+.redword{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+.area{
+    margin: 20px 10px;
+    width: 97%;
+    border: 1px solid white;
+    box-shadow: 0 0 2px 1px gray;
+    height: 100px;
+    border-radius: 4px;
+    resize: none;
+    outline: 1px solid white;
+}
+.cenzor{
+    width: 100%;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cenzor:hover{
+    box-shadow: 0 0 5px 1px black;
+    font-weight: bold;
+}
+.redBorder{
+    border: 2px solid red;
+}

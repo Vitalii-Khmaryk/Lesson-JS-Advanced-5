@@ -1,0 +1,26 @@
+<div class="menu">
+    <div class="menu-box">
+        <p>Last works >>></p>
+        <button class="menu-btn" [routerLink]="[ '/works/cenzor']">Cenzor</button>
+        <button class="menu-btn" [routerLink]="[ '/works/userslist']">Users</button>
+        <button class="menu-btn active">Task</button>
+    </div>
+    <div><p class="back" [routerLink]="[ '/']">Back to >>> Home</p></div>
+</div>
+
+
+<div class="container">
+    <header>
+      <p class="text">
+       Count of task: <span>{{ count }}</span>
+      </p>
+      <hr />
+      <input type="text" [(ngModel)]="nameTask" [placeholder]="place" />
+      <button (click)="addTask()" class="addBtn">Add</button>
+    </header>
+    <app-child
+      [nameTask]="childnameTask"
+      [taskMass]="childTaskMass"
+      (fromChild)="getCount($event)"
+    ></app-child>
+  </div>

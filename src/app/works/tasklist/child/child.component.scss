@@ -1,0 +1,133 @@
+.btnEdit{
+    background-color: yellowgreen;
+    width: 60px;
+    height: 35px;
+    color: black;
+    border: 1px solid yellowgreen;
+    border-radius: 4px;
+}
+.btnDelete{
+    background-color: red;
+    width: 60px;
+    height: 35px;
+    color: white;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+table{
+    margin: 20px 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+tr,td,th{
+    border-bottom: 1px solid rgb(125, 97, 97);
+}
+th{
+    padding-right: 150px;
+}
+td{
+    padding: 10px 10px;
+}
+.btnDelete:hover{
+    box-shadow: 0 0 10px 1px black;
+    color: black;
+}
+.btnEdit:hover{
+    color: white;
+    box-shadow: 0 0 10px 1px black;
+}
+.tr:hover {
+    background-color: rgb(228, 228, 252);
+}
+tr td:first-child {
+    border-right: 0px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  
+  tr td:last-child {
+    border-left: 0px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  tr td:not(:first-child, :last-child) {
+    border-left: 0px;
+    border-right: 0px;
+  }
+  
+  tr:hover td:first-child {
+    border-color: black;
+    border-right: 0px;
+    background-color: lightgray;
+  }
+  
+  tr:hover td:last-child {
+    background-color: lightgray;
+    border-color: black;
+    border-left: 0px;
+  }
+  
+  tr:hover td:not(:first-child, :last-child) {
+    background-color: lightgray;
+    border-color: black;
+    border-left: 0px;
+    border-right: 0px;
+  }
+.done{
+    color: green;
+}
+.prog{
+    color: red;
+}
+.red{
+    color: red;
+}
+.blurRed{
+    background-color: rgb(237, 116, 116);
+}
+.bold{
+    font-weight: bold;
+}
+.save{
+    background-color: rgb(210, 194, 194);
+    width: 1050px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(210, 194, 194);
+    height: 50px;
+    overflow-y: hidden;
+}
+.savebtn{
+    background-color: green;
+    color: white;
+    width: 60px;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid green;
+    cursor: pointer;
+}
+.savebtn:hover{
+    box-shadow: 0 0 5px 1px black;
+    font-weight: bold;
+}
+.inpSave{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: none;
+}
+.inpSave:focus{
+    border: 1px solid blue;
+    box-shadow: 0 0 5px 1px rgb(127, 127, 224);
+}
+.w{
+    width: 200px;
+}
+.block{
+    width: 1053px;
+    height: 247px;
+    background-color: #eae3e3;
+    position: absolute;
+    top: 76%;
+}

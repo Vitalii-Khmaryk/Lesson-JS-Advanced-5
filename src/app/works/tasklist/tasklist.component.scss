@@ -1,0 +1,84 @@
+.menu{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    &-box{
+        display: flex;
+    }
+    p{
+        margin-left: 20px;
+    }
+}
+.menu-btn{
+    font-weight: bold;
+    color: blue;
+    width: 80px;
+    background-color: white;
+   border: none;
+   border-bottom: 1px solid gray;
+    margin-left: 10px;
+    position: relative;
+    top: 6px;
+    cursor: pointer;
+}
+.menu-btn:hover{
+    border: 1px solid gray;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    color: rgb(255, 242, 0);
+    border-bottom: 1px solid white;
+}
+.active{
+    border: 2px solid gray;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    color: green;
+    border-bottom: 1px solid white;
+}
+.back{
+    cursor: pointer;
+    margin-right: 20px;
+    color: red;
+}
+
+
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    height: 50vh;
+    margin-left: 80px;
+}
+.text{
+    font-weight: bold;
+}
+header{
+    font-size: 30px;
+}
+input[type="text"]{
+    margin-top: 10px;
+    width: 84%;
+    margin-right: 6px;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid gray;
+}
+.addBtn{
+    background-color: green;
+    border-radius: 8px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid green;
+    color: white;
+}
+input[type="text"]:focus{
+    box-shadow: 0 0 10px 5px rgb(114, 114, 213);
+}
+.addBtn:hover{
+    box-shadow: 0 0 10px 5px black;
+    font-weight: bold;
+}

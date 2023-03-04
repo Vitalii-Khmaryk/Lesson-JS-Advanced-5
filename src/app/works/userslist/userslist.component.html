@@ -1,0 +1,50 @@
+<div class="menu">
+    <div class="menu-box">
+        <p>Last works >>></p>
+        <button class="menu-btn" [routerLink]="[ '/works/cenzor']">Cenzor</button>
+        <button class="menu-btn active">Users</button>
+        <button class="menu-btn" [routerLink]="[ '/works/tasklist']">Task</button>
+    </div>
+    <div><p class="back" [routerLink]="[ '/']">Back to >>> Home</p></div>
+</div>
+
+
+
+<div class="conteiner">
+    <div class="blockForma">
+        <p>Login</p>
+        <input type="text" [(ngModel)]="userName" (input)="inputerLogin()" [class]="classLogin" class="user-login" placeholder="Enter login" required/>
+        <p>Password</p>
+        <input type="password" [(ngModel)]="userPass" (input)="inputerPass()" [class]="classPass" class="user-password" placeholder="Enter password" required />
+        <p>Email address</p>
+        <input type="text" class="user-email" [(ngModel)]="userEmail" (input)="inputerEmail()" [class]="classEmail" placeholder="Enter email" required/>
+        <input type="button" *ngIf="!editStatus" class="user-btn" value="Add user" (click)="adder()" [disabled]="dis"  />
+        <input type="button" *ngIf="editStatus" class="user-edit-btn" value="Edit user" (click)="editUserBtn()"/>
+    </div>
+    <div class="tablo">
+      <table>
+        <thead>
+          <tr>
+            <th class="trHead">#</th>
+            <th class="trHead">Login</th>
+            <th class="trHead">Password</th>
+            <th class="trHead">Email</th>
+            <th class="trHead">Edit</th>
+            <th class="trHead">Delete</th>
+          </tr>
+        </thead>
+        <div class="content" id="tBody">
+          <tbody class="user-list" *ngFor="let userlog of userMass; let i=index">
+            <tr>
+              <td>{{i + 1}}</td>
+              <td>{{userlog}}</td>
+              <td><span>{{userMass1[i]}}</span></td>
+              <td><span>{{userMass2[i]}}</span></td>
+              <td><input type='button' class='edit-btn btn' name='edit' (click)="editer(i)" value='Edit'></td>
+              <td><input type='button' class='delete-btn btn' name='delete' (click)="deleter(i)" value='Delete' [disabled]="editStatus" [ngClass]="{'opac': editStatus}"></td>
+            </tr>
+          </tbody>
+        </div>
+      </table>
+    </div>
+  </div>

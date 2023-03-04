@@ -1,0 +1,48 @@
+<table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Task</th>
+        <th>Check</th>
+        <th>DONE/IN PROGRESS</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tasks of taskMass; index as i">
+        <td class="bold">{{ i + 1 }}</td>
+        <td>{{ tasks }}</td>
+        <td>
+          <input
+            type="checkbox"
+            [(ngModel)]="checked[i]"
+            (change)="onChange(i)"
+          />
+        </td>
+        <td
+          class="red"
+          [style.color]="color[i]"
+          [textContent]="text[i] || 'In PROGRESS'"
+        ></td>
+        <td><button class="btnEdit" (click)="edder(i)">Edit</button></td>
+        <td>
+          <button
+            class="btnDelete"
+            [disabled]="!checked[i]"
+            [ngClass]="{ blurRed: !checked[i] }"
+            (click)="deleter(i)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-container *ngIf="ngif">
+    <td class="save">
+      <div class="w"></div>
+      <input type="text" [(ngModel)]="editValue" class="inpSave" />
+      <button class="savebtn" (click)="saver()">Save</button>
+    </td>
+  </ng-container>
